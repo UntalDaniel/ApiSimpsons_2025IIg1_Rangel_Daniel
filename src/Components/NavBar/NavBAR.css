@@ -1,0 +1,26 @@
+nav {
+    height: 100%; /* Ocupa toda la altura del contenedor principal (debajo del header) */
+    width: 150px; 
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Centra la lista verticalmente */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Organiza los elementos verticalmente */
+  padding: 0;
+  margin: 0;
+  height: 50%; /* Ajustar según sea necesario */
+  justify-content: space-around; /* Distribuye los elementos verticalmente */
+}
+
+nav li {
+  padding: 15px 0; /* Agrega relleno vertical */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
