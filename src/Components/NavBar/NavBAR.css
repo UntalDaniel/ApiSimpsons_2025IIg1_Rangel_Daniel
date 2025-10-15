@@ -1,7 +1,7 @@
 nav {
     height: 100%; /* Ocupa toda la altura del contenedor principal (debajo del header) */
     width: 150px; 
-    background-color: black;
+    background-color: var(--azul-oscuro);
     display: flex;
     justify-content: center; /* Centra la lista verticalmente */
 }
@@ -21,6 +21,12 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: var(--blanco);
     text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.12);
 }

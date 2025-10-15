@@ -14,5 +14,5 @@
   flex: 1;
   padding: 20px;
   overflow-y: auto;
-  background-color: #f0f0f0;
+  background-color: var(--gris-fondo);
 }

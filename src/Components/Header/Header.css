@@ -7,7 +7,7 @@ header{
     display:flex ;
     height: 100px;
     width: 100%;
-    background-color: #F9CA4D;
+    background-color: var(--amarillo);
 }
 
 header img{
@@ -17,7 +17,7 @@ header img{
 
 #Titulo{
     display: flex;
-    color: rgb(255, 255, 255);
+    color: var(--blanco);
     align-items: center;
     font-size: 80px;
 }

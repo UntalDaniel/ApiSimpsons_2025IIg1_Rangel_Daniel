@@ -1,10 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './Components/Header/Header';
-import NavBar from './Components/NavBar/NavBar';
-import Inicio from './Components/Inicio/Inicio';
-import Personajes from './Components/Personajes/Personajes';
-import Episodios from './Components/Episodios/Episodios';
-import Lugares from './Components/Lugares/Lugares';
+import Header from './components/Header/Header';
+import NavBar from './components/Navbar/Navbar';
+import Inicio from './pages/Home/Home';
+import Personajes from './pages/Characters/Characters';
+import Episodios from './pages/Episodes/Episodes';
+import Lugares from './pages/Locations/Locations';
+import CharacterDetail from './pages/CharacterDetail/CharacterDetail';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/personajes" element={<Personajes />} />
             <Route path="/episodios" element={<Episodios />} />
             <Route path="/lugares" element={<Lugares />} />
+            <Route path="/personaje/:id" element={<CharacterDetail />} />
           </Routes>
         </main>
       </div>
