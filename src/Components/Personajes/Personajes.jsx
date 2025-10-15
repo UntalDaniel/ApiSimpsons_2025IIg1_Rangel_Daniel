@@ -1,6 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { Grid, Card, CardMedia, CardContent, Typography } from '@mui/material';
+import { imagenSimpsons } from '../../utils/imagenes';
 
 const Personajes = () => {
   const [personajes, setPersonajes] = useState([]);
@@ -24,8 +24,13 @@ const Personajes = () => {
             <CardMedia
               component="img"
               height="300"
-              image={personaje && personaje.portrait_path && personaje.portrait_path.startsWith('http') ? personaje.portrait_path : `https://thesimpsonsapi.com${(personaje && personaje.portrait_path) ? personaje.portrait_path : ''}`}
+              image={imagenSimpsons('character', personaje)}
               alt={personaje.name}
+              onError={(e) => {
+                if (personaje && personaje.id) {
+                  e.currentTarget.src = `https://cdn.thesimpsonsapi.com/500/character/${personaje.id}.webp`;
+                }
+              }}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -43,5 +48,6 @@ const Personajes = () => {
 };
 
 export default Personajes;
+
 
 

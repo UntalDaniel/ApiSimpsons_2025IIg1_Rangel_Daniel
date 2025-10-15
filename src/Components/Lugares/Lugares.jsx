@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Grid, Card, CardMedia, CardContent, Typography } from '@mui/material';
+import { imagenSimpsons } from '../../utils/imagenes';
 
 const Lugares = () => {
   const [lugares, setLugares] = useState([]);
@@ -24,8 +25,13 @@ const Lugares = () => {
             <CardMedia
               component="img"
               height="200"
-              image={lugar && lugar.image_path && lugar.image_path.startsWith('http') ? lugar.image_path : `https://thesimpsonsapi.com${(lugar && lugar.image_path) ? lugar.image_path : ''}`}
+              image={imagenSimpsons('location', lugar)}
               alt={lugar.name}
+              onError={(e) => {
+                if (lugar && lugar.id) {
+                  e.currentTarget.src = `https://cdn.thesimpsonsapi.com/500/location/${lugar.id}.webp`;
+                }
+              }}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
