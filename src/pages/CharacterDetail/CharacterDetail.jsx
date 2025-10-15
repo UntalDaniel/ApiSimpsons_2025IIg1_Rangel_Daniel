@@ -3,12 +3,14 @@ import { useParams } from 'react-router-dom';
 import { imagenSimpsons } from '../../utils/imagenes';
 
 function CharacterDetail() {
+  // tomo el id de la url para pedir el personaje
   const { id } = useParams();
   const [personaje, setPersonaje] = useState(null);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // traer un personaje por id
     setCargando(true);
     setError(null);
     fetch(`https://thesimpsonsapi.com/api/characters/${id}`)

@@ -1,0 +1,8 @@
+.card-personaje {
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.card-personaje:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
